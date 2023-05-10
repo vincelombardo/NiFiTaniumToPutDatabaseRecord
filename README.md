@@ -75,4 +75,4 @@ As stated earlier row data consists of values that all have the key "text" in th
 
 Once the data leaves the Get Row Values processor group, it is ready to be loaded into a destination. First it feeds into a MergeContent processor so that multiple entries can be combined into a single, larger batch. Then any recordset aware processor can use a JSONTreeReader record reader and load the data into its destination.
 
-See the template files in this repository for full details. Use Tanium_to_Iceberg.json for Cloudera's DataFLow Designer, otherwise use Tanium_to_PutDatabaseRecord.xml for the traditional NiFi UI.
+See the Tanium_to_PutDatabaseRecord template files in this repository for full details.
