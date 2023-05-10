@@ -10,7 +10,7 @@ This article describes a NiFi flow that consumes data from Tanium API endpoints.
 The flow shows two data subject areas. The data subjects are determined by the Tanium question and it is assumed that saved questions have been defined within the Tanium source. Since the data results are combined into a funnel and all processed in the same way (due to the fact that the Tanium API always returns results with the same structure), additional data subjects could be added in the same way and joined into the funnel.
 
 Each data subject is pulling from three different Tanium endpoints (DEV, TEST, PROD environments). This is to simulate having three domains and needing to pull information from all three. There is also a processor for sending a test flow file that can be used to test the flow without invoking an API call. All of these initial processors are of type GenerateFlowFile and are used to set which Tanium environment is to be queried, what saved question id is to be used (or in the case Test FlowFile processors, the fact that it is just a test), and this information is stored within flowfile attributes to be used further along in the flow. Having separated initial GenerateFlowFile processors in this manner allows for them to be separately and independently triggered on any desired schedule. This portion of the flow is shown below in the Cloudera DataFlow Designer.
-v1d3_0-1683687423074.png
+![image](https://github.com/vincelombardo/NiFiTaniumToPutDatabaseRecord/assets/21046032/7bc68f25-925c-46d1-9333-2f018d4efa41)
 
 As can be seen above, before the flow goes into the funnel, there are processors that allow adding attributes that are specific to the data subject; in this case they are defining the target table name.
 
