@@ -55,6 +55,7 @@ After the results are received, a call to the API to get the actual results is m
 # Tanium Result Structure
 
 Before we go further, you may be wondering about the statement above about extracting column information. What does a Tanium data result look like? Well, it has all of the information that the informational pull had as well as the actual results, which includes a section for column names and a section for the results those correspond to. However, the keys for the values in the results are all the word "text". So somehow the column names need to be matched up with the rows and brought together into a form that can be used in recordset aware processors. Below is an example result (abbreviated to show only relevant data) with just one row:
+
 ![image](https://github.com/vincelombardo/NiFiTaniumToPutDatabaseRecord/assets/21046032/b3307062-cb5d-4955-ab2b-88e8a99e2b66)
 
  
