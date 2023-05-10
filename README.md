@@ -74,3 +74,5 @@ As stated earlier row data consists of values that all have the key "text" in th
 # Merging and Loading
 
 Once the data leaves the Get Row Values processor group, it is ready to be loaded into a destination. First it feeds into a MergeContent processor so that multiple entries can be combined into a single, larger batch. Then any recordset aware processor can use a JSONTreeReader record reader and load the data into its destination.
+
+See the template file Tanium_to_PutDatabaseRecord.xml in this repository for full details.
